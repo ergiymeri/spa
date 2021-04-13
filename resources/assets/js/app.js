@@ -5,8 +5,13 @@
  * building robust, powerful web applications using Vue and Laravel.
  */
 import Vue from 'vue'
+import router from './Router/router.js'
+import User from './Helpers/User'
 require('./bootstrap');
+
+window.User = User;
 window.Vue = require('vue');
+console.log(User.id());
 
 
 
@@ -18,7 +23,7 @@ window.Vue = require('vue');
 
 Vue.component('AppHome', require('./components/AppHome.vue').default);
 
-import router from './Router/router.js'
+
 
 const app = new Vue({
     el: '#app',
